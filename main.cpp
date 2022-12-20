@@ -51,7 +51,7 @@ public:
         if (!bulk.empty()) {
             print_to(cout);
             ofstream file;
-            file.open(to_string(block_time) + ".log");
+            file.open("bulk" + to_string(block_time) + ".log");
             print_to(file);
             file.close();
             bulk.clear();
