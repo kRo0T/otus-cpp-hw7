@@ -6,67 +6,7 @@
 #include <fstream>
 
 using namespace std;
-/*
-class Observer {
-public:
-    virtual void update(const vector<int>& data) = 0;
-};
 
-class ConsoleObserver : public Observer {
-public:
-    void update(const vector<int>& data) {
-        for (int i : data) {
-            cout << i << " ";
-        }
-        cout << endl;
-    }
-};
-
-class FileObserver : public Observer {
-private:
-    string fileName;
-public:
-    FileObserver(string name) : fileName(name) {}
-    void update(const vector<int>& data) {
-        ofstream file(fileName);
-        for (int i : data) {
-            file << i << " ";
-        }
-        file << endl;
-    }
-};
-
-class Subject {
-private:
-    vector<int> data;
-    vector<Observer*> observers;
-public:
-    void attach(Observer* observer) {
-        observers.push_back(observer);
-    }
-
-    void setData(vector<int> d) {
-        data = d;
-        notify();
-    }
-
-    void notify() {
-        for (Observer* observer : observers) {
-            observer->update(data);
-        }
-    }
-};
-
-int main() {
-    ConsoleObserver consoleObserver;
-    FileObserver fileObserver("output.txt");
-    Subject subject;
-    subject.attach(&consoleObserver);
-    subject.attach(&fileObserver);
-    subject.setData({1, 2, 3});
-    return 0;
-}
-*/
 class IPrinter {
 protected:
     void print_to(ostream& stream, const vector<string>& bulk) {
